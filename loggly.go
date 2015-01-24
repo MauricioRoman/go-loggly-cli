@@ -1,6 +1,6 @@
 package main
 
-import "github.com/segmentio/go-loggly-search"
+import "github.com/MauricioRoman/go-loggly-search"
 import j "github.com/segmentio/go-simplejson"
 import "github.com/jehiah/go-strftime"
 import "strings"
@@ -141,7 +141,7 @@ func main() {
 
 	args := flags.Args()
 	query := strings.Join(args, " ")
-	c := search.New(*account, *user, *pass)
+	c := search.NewLS(*account, *user, *pass)
 
 	// --count
 	if *count {
